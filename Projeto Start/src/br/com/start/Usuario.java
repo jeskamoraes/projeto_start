@@ -18,18 +18,14 @@ public class Usuario extends Pessoa {
 		this.senha = senha;
 	}
 	
+	//Validando usuario e senha
 	void verificarLogin() {
-		String _usuario = "joao";
-		String _senha   = "123";
-		if (login == _usuario && senha == _senha) {
+		if (login == "joao" && senha == "123") {
 			System.out.println("Login realizado com sucesso");
 		}
 		else {
 			System.out.println("Login ou senha invalidos!");
 		}
-	}
-	void verificarSenha(String _senha) {
-		
 	}
 
 }
