@@ -1,13 +1,12 @@
 package br.com.start;
 
-public class Pessoa {
+public abstract class Pessoa {
 
 	private String nome;
 	private String dataNascimento;
 	private String cpf;
 	private String email;
 	private String telefone;
-	private String cep;
 	private String estado;
 	private String cidade;
 
@@ -49,14 +48,6 @@ public class Pessoa {
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
-	}
-
-	public String getCep() {
-		return cep;
-	}
-
-	public void setCep(String cep) {
-		this.cep = cep;
 	}
 
 	public String getEstado() {

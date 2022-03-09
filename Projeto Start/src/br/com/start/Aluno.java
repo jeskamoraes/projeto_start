@@ -1,7 +1,11 @@
 package br.com.start;
 
-public class Aluno extends Pessoa {
+import java.util.Scanner;
 
+public class Aluno extends Pessoa {
+	
+	static Scanner entrada = new Scanner(System.in);
+	
 	private String turma;
 	private String escola;
 
@@ -26,11 +30,33 @@ public class Aluno extends Pessoa {
 	}
 
 	void cadastarAluno() {
-		System.out.println("Aluno cadastrado com sucesso!");
-		// System.out.println(getNome()); -->Exibindo dados para teste
-		// System.out.println(cidade); -->Exibindo dados para teste
+		//CRIANDO A INSTANCIA DA CLASSE USUARIO PARA PODER PASSAR A SENHA
+		Usuario usu = new Usuario();
+		System.out.println("Digite seu nome");
+		setNome(entrada.next());
+		System.out.println("Digite sua data de nascimento");
+		setDataNascimento(entrada.next());
+		System.out.println("Digite seu CPF");
+		setCpf(entrada.next());
+		System.out.println("Digite seu email");
+		setEmail(entrada.next());
+		System.out.println("Digite sua senha");
+		usu.setSenha(entrada.next());
+		System.out.println("Digite seu telefone");
+		setTelefone(entrada.next());
+		System.out.println("Digite seu estado");
+		setEstado(entrada.next());
+		System.out.println("Digite sua cidade");
+		setCidade(entrada.next());
+		System.out.println("Digite sua escola");
+		setEscola(entrada.next());
+		System.out.println("Digite sua turma");
+		setTurma(entrada.next());
+		System.out.println();
+		System.out.println("Cadastro realizado com sucesso");
+		Main.menuPrincipal();
 	}
-
+	
 	void exibirAluno() {
 	}
 
