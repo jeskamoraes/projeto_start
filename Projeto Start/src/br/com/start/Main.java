@@ -15,42 +15,71 @@ public class Main {
 		System.out.println("=     A melhor viagem de formatura  =");
 		System.out.println("=====================================");
 
-		System.out.println();
-		System.out.println("Possui cadastro?");
-		System.out.println("1-Sim");
-		System.out.println("2-Nao");
-		Scanner entrada = new Scanner(System.in);
-		int cadastro = entrada.nextInt();
+		char opcoes;
 
-		switch (cadastro) {
-		case 1:
-			System.out.println("Digite seu usuario");
-			usu.setLogin(entrada.next());;
-			System.out.println("Digite sua senha");
-			usu.setSenha(entrada.next());;
-			usu.verificarLogin();
+		Scanner entrada = new Scanner(System.in);
+		do {
+			System.out.println();
+			System.out.println("Seja bem vindo a START insira a opcao desejada");
+			System.out.println("[1] - Cadastro");
+			System.out.println("[2] - Ajuda");
+			System.out.println("[3] - Sair");
+			opcoes = entrada.next().charAt((0));
+
+			switch (opcoes) {
+			case '1':
+				break;
+			case '2':
+				break;
+			case '3':
+				System.out.println("Saindo do sistema");
+				System.exit(0);
+				break;
+			default:
+				System.out.println("Opcoes invalidas");
+			}
+
+		} while (opcoes != '1' && opcoes != '2');
+
+		do {
+			System.out.println();
+			System.out.println("Possui cadastro?");
+			System.out.println("[1] - Sim");
+			System.out.println("[2] - Nao");
+			System.out.println("[3] - Sair");
+			opcoes = entrada.next().charAt((0));
 			
-			break;
-		case 2:
-			System.out.println();
-			System.out.println("Digite seu nome");
-			alu.setNome(entrada.next());
-			System.out.println("Digite seu email");
-			alu.setEmail(entrada.next());
-			System.out.println("Digite seu telefone");
-			alu.setTelefone(entrada.next());
-			System.out.println("Digite seu estado");
-			alu.setEstado(entrada.next());
-			System.out.println("Digite sua cidade");
-			alu.setCidade(entrada.next());
-			System.out.println("qual o seu colegio?");
-			alu.setEscola(null);
-			System.out.println("qual o seu ano letivo?");
-			alu.setTurma(null);
-			System.out.println();
-			alu.cadastarAluno();
-			break;
-		}
+			switch (opcoes) {
+			case '1':
+				System.out.println("Digite seu usuario");
+				usu.setLogin(entrada.next());
+				System.out.println("Digite sua senha");
+				usu.setSenha(entrada.next());
+				usu.verificarLogin();
+				break;
+			case '2':
+				System.out.println("Digite seu nome");
+				alu.setNome(entrada.next());
+				System.out.println("Digite seu email");
+				alu.setEmail(entrada.next());
+				System.out.println("Digite seu telefone");
+				alu.setTelefone(entrada.next());
+				System.out.println("Digite seu estado");
+				alu.setEstado(entrada.next());
+				System.out.println("Digite sua cidade");
+				alu.setCidade(entrada.next());
+				System.out.println();
+				alu.cadastarAluno();
+				break;
+			case '3':
+				System.out.println("Saindo do sistema");
+				System.exit(0);
+				break;
+			default:
+				System.out.println("Opcoes invalidas");
+			}
+
+		} while (opcoes != '1' && opcoes != '2');
 
 		entrada.close();
 
