@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Pacote {
 
-	// atributos
+	// ATRIBUTOS
 	private String destino;
 	private String valores;
 	private String refeicao;
@@ -16,7 +16,7 @@ public class Pacote {
 	static Scanner leitor = new Scanner(System.in);
 	static char opcoes;
 
-	// metodos
+	// MÉTODOS
 	public String getDestino() {
 		return destino;
 	}
@@ -88,13 +88,13 @@ public class Pacote {
 			escolherPacote();
 			break;
 		default:
-			System.out.println("Opcao invalida");
+			System.out.println("Opção inválida");
 		}
 
 	}
 
 	public void escolherPacote() {
-		System.out.println("Deseja fechar esse pacote?");
+		System.out.println("Deseja escolher esse pacote?");
 		System.out.println("[1] - Sim");
 		System.out.println("[2] - Não");
 		escolhaFinal = leitor.next().charAt((0));
@@ -126,7 +126,7 @@ public class Pacote {
 		System.out.println("\n---------------------------------------------------------------------------------");
 		System.out.println("Destino: " + this.getDestino());
 		System.out.println("Show/Festa: " + this.getShowsFestas());
-		System.out.println("Hospedagem " + this.getHospedagem());
+		System.out.println("Hospedagem: " + this.getHospedagem());
 		System.out.println("Quais refeições estão inclusas no valor total do pacote? " + this.getRefeicao());
 		System.out.println("Valor do seu pacote de viagem: " + this.getValores());
 		System.out.println("\n---------------------------------------------------------------------------------");
@@ -143,7 +143,7 @@ public class Pacote {
 		System.out.println("\n---------------------------------------------------------------------------------");
 		System.out.println("Destino: " + this.getDestino());
 		System.out.println("Show/Festa: " + this.getShowsFestas());
-		System.out.println("Hospedagem " + this.getHospedagem());
+		System.out.println("Hospedagem: " + this.getHospedagem());
 		System.out.println("Quais refeições estão inclusas no valor total do pacote? " + this.getRefeicao());
 		System.out.println("Valor do seu pacote de viagem: " + this.getValores());
 		System.out.println("\n---------------------------------------------------------------------------------");
@@ -160,7 +160,7 @@ public class Pacote {
 		System.out.println("\n---------------------------------------------------------------------------------");
 		System.out.println("Destino: " + this.getDestino());
 		System.out.println("Show/Festa: " + this.getShowsFestas());
-		System.out.println("Hospedagem " + this.getHospedagem());
+		System.out.println("Hospedagem: " + this.getHospedagem());
 		System.out.println("Quais refeições estão inclusas no valor total do pacote? " + this.getRefeicao());
 		System.out.println("Valor do seu pacote de viagem: " + this.getValores());
 		System.out.println("\n---------------------------------------------------------------------------------");

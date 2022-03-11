@@ -107,23 +107,23 @@ public class Aluno {
 	}
 
 	public void cadastrarAluno() {
-		System.out.println("Nome: ");
+		System.out.println("Digite seu nome: ");
 		setNome(entrada.nextLine());
-		System.out.println("Idade: ");
+		System.out.println("Digita sua idade: ");
 		setIdade(entrada.nextLine());
-		System.out.println("CPF: ");
+		System.out.println("Digite o CPF: ");
 		setCpf(entrada.nextLine());
-		System.out.println("Endereço: ");
+		System.out.println("Digite o endereço: ");
 		setEndereco(entrada.nextLine());
-		System.out.println("Telefone: ");
+		System.out.println("Digite o telefone: ");
 		setTelefone(entrada.nextLine());
-		System.out.println("Instituição: ");
+		System.out.println("Informe sua instituição: ");
 		setInstituicao(entrada.nextLine());
-		System.out.println("Turma: ");
+		System.out.println("Informe sua turma: ");
 		setTurma(entrada.nextLine());
-		System.out.println("Email: ");
+		System.out.println("Digite seu email (Será utilizado para fazer o login): ");
 		setEmail(entrada.nextLine());
-		System.out.println("Senha: ");
+		System.out.println("Digite sua senha: ");
 		setSenha(entrada.nextLine());
 		Main.menuPrincipal();
 		
@@ -155,6 +155,9 @@ public class Aluno {
 		while (usuarioLogado == false) {
 
 			// CAPUTANDO EMAIL E SENHA DIGITADO
+			System.out.println("----------------");
+			System.out.println("     LOGIN      ");
+			System.out.println("----------------");
 			System.out.println("Digite seu email");
 			String digitadoSsuario = entrada.next();
 
@@ -168,12 +171,14 @@ public class Aluno {
 			if (digitadoSsuario.equals(_email) && digitadoSenha.equals(_senha)) {
 				// CASO O USUARIO DIGITAR EMAIL E SENHA CORRETAS, APRENSAR O SISTEMA LOGADO
 				System.out.println("Login realizado com sucesso");
+				System.out.println("\n");
 				exibirMenuLogin();
 				usuarioLogado = true;
 			} else {
 				// SE O USUARIO DIGITAR EMAIL OU SENHA INVALIDOS, APRESENTAR MENSAGEM E CAPTURAR
 				// NOVAMENTE
 				System.out.println("Email ou senha invalidos!");
+				System.out.println("Tente novamente [2] ou faça seu cadastro [1].");
 				Main.menuPrincipal();
 				usuarioLogado = false;
 			}
@@ -184,12 +189,11 @@ public class Aluno {
 	void exibirMenuLogin() {
 		do {
 			System.out.println();
-			System.out.println("Selecione a opcao desejada:");
-			System.out.println("[1] - Minhas informacoes");
+			System.out.println("Selecione a opção desejada:");
+			System.out.println("[1] - Minhas informações");
 			System.out.println("[2] - Pacotes");
-			System.out.println("[3] - Sobre a Start");
-			System.out.println("[4] - Sair");
-			
+			System.out.println("[3] - Sair");
+						
 			Pacote pac = new Pacote();
 			
 			// CAPTURANDO VALOR DIGITADO NO CONSOLE
@@ -203,22 +207,11 @@ public class Aluno {
 				pac.conhecerPacote();
 				break;
 			case '3':
-				System.out.println("---------------------------------------------------------------------------");
-				System.out.println("                            SOBRE A START                        ");
-				System.out.println("---------------------------------------------------------------------------");
-				System.out.println("=  A Start é  um aplicativo focado em facilitar e transformar             = \n"
-						+ "=  a sua experiência pós formatura, pois, sabemos o quão importante       =\n"
-						+ "=  e marcante esse momento é na vida dos formandos, seja no ensino médio  =\n"
-						+ "=  ou superior.  ");
-				System.out.println("---------------------------------------------------------------------------");
-				exibirMenuLogin();
-				break;
-			case '4':
 				System.out.println("Saindo do sistema");
 				System.exit(0);
 				break;
 			default:
-				System.out.println("Opcao invalida");
+				System.out.println("Opção inválida");
 			}
 
 		} while (opcoes != '2' && opcoes != '3');

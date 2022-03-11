@@ -19,16 +19,16 @@ public class Contato extends Aluno{
     
     public void formContato() {
         //PREENCHENDO FORMULARIO DE CONTATO
-                System.out.println("Digite seu nome");
-                setNome(entrada.next());
-                System.out.println("Digite seu email");
-                setEmail(entrada.next());
-                System.out.println("Digite seu telefone");
-                setTelefone(entrada.next());
-                System.out.println("Digite sua mensagem");
-                setMensagem(entrada.next());
+                System.out.println("Digite seu nome: ");
+                setNome(entrada.nextLine());
+                System.out.println("Digite seu email: ");
+                setEmail(entrada.nextLine());
+                System.out.println("Digite o telefone: ");
+                setTelefone(entrada.nextLine());
+                System.out.println("Digite sua mensagem:");
+                setMensagem(entrada.nextLine());
                 System.out.println();
-                System.out.println("OBRIGADO PELO SEU CONTATO EM BREVE RETORNAREMOS A SUA SOLICITAÇÃO.");
+                System.out.println("OBRIGADO(A) PELO SEU CONTATO, EM BREVE RETORNAREMOS A SUA SOLICITAÇÃO.");
                 Main.menuPrincipal();
     }
 }
