@@ -203,6 +203,15 @@ public class Aluno {
 				pac.conhecerPacote();
 				break;
 			case '3':
+				System.out.println("---------------------------------------------------------------------------");
+				System.out.println("                            SOBRE A START                        ");
+				System.out.println("---------------------------------------------------------------------------");
+				System.out.println("=  A Start é  um aplicativo focado em facilitar e transformar             = \n"
+						+ "=  a sua experiência pós formatura, pois, sabemos o quão importante       =\n"
+						+ "=  e marcante esse momento é na vida dos formandos, seja no ensino médio  =\n"
+						+ "=  ou superior.  ");
+				System.out.println("---------------------------------------------------------------------------");
+				exibirMenuLogin();
 				break;
 			case '4':
 				System.out.println("Saindo do sistema");
