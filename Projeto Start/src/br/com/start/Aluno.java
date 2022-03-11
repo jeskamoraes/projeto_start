@@ -108,23 +108,23 @@ public class Aluno {
 
 	public void cadastrarAluno() {
 		System.out.println("Digite seu nome: ");
-		setNome(entrada.nextLine());
+		setNome(entrada.next());
 		System.out.println("Digita sua idade: ");
-		setIdade(entrada.nextLine());
+		setIdade(entrada.next());
 		System.out.println("Digite o CPF: ");
-		setCpf(entrada.nextLine());
+		setCpf(entrada.next());
 		System.out.println("Digite o endereço: ");
-		setEndereco(entrada.nextLine());
+		setEndereco(entrada.next());
 		System.out.println("Digite o telefone: ");
-		setTelefone(entrada.nextLine());
+		setTelefone(entrada.next());
 		System.out.println("Informe sua instituição: ");
-		setInstituicao(entrada.nextLine());
+		setInstituicao(entrada.next());
 		System.out.println("Informe sua turma: ");
-		setTurma(entrada.nextLine());
+		setTurma(entrada.next());
 		System.out.println("Digite seu email (Será utilizado para fazer o login): ");
-		setEmail(entrada.nextLine());
+		setEmail(entrada.next());
 		System.out.println("Digite sua senha: ");
-		setSenha(entrada.nextLine());
+		setSenha(entrada.next());
 		Main.menuPrincipal();
 		
 	}
